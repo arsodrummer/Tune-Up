@@ -22,7 +22,7 @@ namespace Tune_Up.Controllers
         {
             db.Services.Add(newService);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Services", "Home");
         }
     }
 }

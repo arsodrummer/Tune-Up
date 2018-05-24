@@ -24,5 +24,11 @@ namespace Tune_Up.Controllers
             db.SaveChanges();
             return RedirectToAction("Services", "Home");
         }
+        [HttpGet]
+        public ActionResult EditService(int? id)
+        {
+            var item = db.Services.Where(s => s.Id == id).FirstOrDefault();
+            return View(item);
+        }
     }
 }

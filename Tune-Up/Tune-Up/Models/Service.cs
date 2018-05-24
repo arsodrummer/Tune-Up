@@ -12,7 +12,7 @@ namespace Tune_Up.Models
         public int Id { get; set; }
         public Vehicle Vehicle { get; set; }
         public Autopart Autopart { get; set; }
-        [DataType(DataType.Date), Required, DisplayFormat(DataFormatString = "{dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date), Required, DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime ServiceDate { get; set; }
         public string Master { get; set; }
         public int Distance { get; set; }

@@ -122,6 +122,7 @@
     <Content Include="Views\Home\Autoparts.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Service\AddService.cshtml" />
+    <Content Include="Views\Service\EditService.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

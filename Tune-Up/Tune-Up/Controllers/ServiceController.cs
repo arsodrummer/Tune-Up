@@ -30,5 +30,19 @@ namespace Tune_Up.Controllers
             var item = db.Services.Where(s => s.Id == id).FirstOrDefault();
             return View(item);
         }
+        [HttpGet]
+        public ActionResult DeleteService(int? id)
+        {
+            var item = db.Services.Where(s => s.Id == id).FirstOrDefault();
+            db.Services.Remove(item);
+            db.SaveChanges();
+            return RedirectToAction("Services", "Home");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

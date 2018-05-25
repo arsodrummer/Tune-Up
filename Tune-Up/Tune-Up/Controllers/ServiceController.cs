@@ -24,6 +24,16 @@ namespace Tune_Up.Controllers
             db.SaveChanges();
             return RedirectToAction("Services", "Home");
         }
+        [HttpPost]
+        public ActionResult SaveService(Tune_Up.Models.Service item)
+        {
+            var itemToSave = db.Services.Where(s => s.Id == item.Id).FirstOrDefault();
+            itemToSave.Master = item.Master;
+            itemToSave.ServiceDate = item.ServiceDate;
+            itemToSave.Distance = item.Distance;
+            db.SaveChanges();
+            return RedirectToAction("Services", "Home");
+        }
         [HttpGet]
         public ActionResult EditService(int? id)
         {

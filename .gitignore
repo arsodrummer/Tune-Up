@@ -4,3 +4,6 @@ Tune-Up/.vs/Tune-Up/v15/Server/sqlite3/db.lock
 Tune-Up/.vs/Tune-Up/v15/Server/sqlite3/storage.ide
 Tune-Up/.vs/Tune-Up/v15/Server/sqlite3/storage.ide-shm
 Tune-Up/.vs/Tune-Up/v15/Server/sqlite3/storage.ide-wal
+*.ide-wal
+*.ide-shm
+*.ide

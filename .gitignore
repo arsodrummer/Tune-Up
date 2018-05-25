@@ -15,3 +15,11 @@ Tune-Up/.vs/Tune-Up/v15/Server/sqlite3/storage.ide-wal
 *.pdb
 *.dll
 *.ide-wal
+*.pdb
+*.dll
+*.pdb
+*.dll
+Tune-Up/Tune-Up/bin/Tune-Up.dll
+Tune-Up/Tune-Up/bin/Tune-Up.pdb
+Tune-Up/Tune-Up/obj/Debug/Tune-Up.dll
+Tune-Up/Tune-Up/obj/Debug/Tune-Up.pdb

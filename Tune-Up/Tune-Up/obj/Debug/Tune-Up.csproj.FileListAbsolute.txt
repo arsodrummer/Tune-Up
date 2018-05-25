@@ -1,3 +1,9 @@
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.IO.Compression.dll
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\VBCSCompiler.exe
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Tune-Up.dll.config
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Tune-Up.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Tune-Up.pdb
@@ -8,13 +14,9 @@ E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\csi.exe
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\csi.exe.config
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\csi.rsp
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.VisualBasic.Core.targets
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -24,7 +26,6 @@ E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Console.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Diagnostics.Process.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Diagnostics.StackTrace.dll
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.IO.Compression.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.IO.FileSystem.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -47,8 +48,9 @@ E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Xml.XPath.XDocument.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\vbc.exe
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\vbc.exe.config
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\vbc.rsp
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\VBCSCompiler.exe
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\VBCSCompiler.exe.config
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.dll
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.SqlServer.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Microsoft.Web.Infrastructure.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Helpers.dll
@@ -57,6 +59,8 @@ E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Razor.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Webpages.Deployment.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Webpages.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Webpages.Razor.dll
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.xml
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.SqlServer.xml
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Razor.xml
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Webpages.xml
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\System.Web.Webpages.Deployment.xml
@@ -69,7 +73,3 @@ E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\obj\Debug\Tune-Up.csproj.CoreCompileInput
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\obj\Debug\Tune-Up.csproj.CopyComplete
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\obj\Debug\Tune-Up.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\obj\Debug\Tune-Up.pdb
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.dll
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.SqlServer.dll
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.xml
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\EntityFramework.SqlServer.xml

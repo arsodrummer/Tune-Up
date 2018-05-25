@@ -8,3 +8,10 @@ Tune-Up/.vs/Tune-Up/v15/Server/sqlite3/storage.ide-wal
 *.ide-shm
 *.ide
 *.ide
+*.pdb
+*.dll
+*.cache
+*.txt
+*.pdb
+*.dll
+*.ide-wal

@@ -23,10 +23,21 @@
             @Html.HiddenFor(model => model.Id)
 
             <div class="form-group">
-                @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                @*@Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })
+                </div>*@
+                <div class="col-sm-2">
+                    <label>
+                        Service date
+                    </label>
+                    <div class="row">
+                        <input type="text" class="form-control datepicker" name="service_date" value="@String.Format("{0:dd.MM.yyyy}", Model.ServiceDate)"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="$(this).closest('.input-group').find('.datepicker').focus();return false;"><span class="glyphicon glyphicon-calendar"></span></button>
+                        </span>
+                    </div>
                 </div>
             </div>
 

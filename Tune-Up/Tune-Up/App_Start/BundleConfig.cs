@@ -25,7 +25,7 @@ namespace Tune_Up.App_Start
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.css",                      
                       "~/Content/site.css"));
         }
     }

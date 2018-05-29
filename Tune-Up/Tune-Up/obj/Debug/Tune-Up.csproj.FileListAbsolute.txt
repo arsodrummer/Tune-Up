@@ -1,3 +1,4 @@
+E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.IO.Compression.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.IO.FileSystem.Primitives.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Security.Cryptography.Primitives.dll
@@ -5,7 +6,6 @@ E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Text.Encoding.CodePages
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Xml.ReaderWriter.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\System.Xml.XPath.XDocument.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\VBCSCompiler.exe
-E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Tune-Up.dll.config
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Tune-Up.dll
 E:\C#\Projects\Tune-Up\Tune-Up\Tune-Up\bin\Tune-Up.pdb

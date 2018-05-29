@@ -1,55 +1,42 @@
 ﻿@model IEnumerable<Tune_Up.Models.Service>
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
+<p/>
+<a class="btn btn-outline-primary" href="/Service/AddService">Add</a>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Master)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distance)
+        </th>
+        <th></th>
+    </tr>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Services</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "AddService", "Service")
-    </p>
-    <table class="table">
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ServiceDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Master)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Distance)
-            </th>
-            <th></th>
+            <td>
+                <div class="alert">@item.ServiceDate.ToString("dd-MM-yyyy")</div>
+            </td>
+            <td>
+                @item.Master
+            </td>
+            <td>
+                @item.Distance
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditService", "Service", new { id = item.Id }, null) |
+                @Html.ActionLink("Delete", "DeleteService", "Service", new { id = item.Id }, null)
+            </td>
         </tr>
+    }
+</table>
+<div>
+    <a class="btn btn-outline-info" href="/Home/Index">Back</a>
+</div>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    <div class="alert">@item.ServiceDate.ToString("dd-MM-yyyy")</div>
-                </td>
-                <td>
-                    @item.Master
-                </td>
-                <td>
-                    @item.Distance
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "EditService", "Service", new { id = item.Id }, null) |
-                    @Html.ActionLink("Delete", "DeleteService", "Service", new { id = item.Id }, null)
-                </td>
-            </tr>
-        }
-    </table>
-    <div>
-        @Html.ActionLink("Back to menu", "Index", "Home")
-    </div>
-</body>
-</html>

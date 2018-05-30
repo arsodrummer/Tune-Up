@@ -8,20 +8,24 @@
     <title>AddService</title>
 </head>
 <body>
+    <div class="span5 col-md-5" id="sandbox-container">
+        <input type="text" class="form-control">
+    </div>
 
     @using (Html.BeginForm())
     {
-        @Html.AntiForgeryToken()
+        @*@Html.AntiForgeryToken()*@
 
         <div class="form-horizontal">
             <h4>Service</h4>
             <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
             <div class="form-group">
                 @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })
+                    <input type="text" autocomplete="off" class="form-control form_service_date" id="ServiceDate">
+                    @*@Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new {@type="text", @class = "form_service_date form-control" } })*@
+                    @*@Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })*@
                 </div>
             </div>
 
@@ -50,7 +54,14 @@
     }
 
     <div>
-         <a class="btn btn-outline-info" href="/Home/Services">Back to services list</a>
+        <a class="btn btn-outline-info" href="/Home/Services">Back to services list</a>
     </div>
 </body>
 </html>
+
+<script type="text/javascript">
+    $('.form_service_date').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+</script>

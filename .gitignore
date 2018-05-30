@@ -27,3 +27,6 @@ Tune-Up/Tune-Up/bin/Tune-Up.dll
 Tune-Up/Tune-Up/bin/Tune-Up.pdb
 Tune-Up/Tune-Up/obj/Debug/Tune-Up.pdb
 Tune-Up/Tune-Up/obj/Debug/Tune-Up.dll
+*.ide
+*.ide-shm
+*.ide-wal

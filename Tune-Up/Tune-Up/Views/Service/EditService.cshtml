@@ -1,15 +1,11 @@
 ﻿@model Tune_Up.Models.Service
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>EditService</title>
+    <title>Edit service item</title>
 </head>
 <body>
     @using (Html.BeginForm())
@@ -23,28 +19,16 @@
             @Html.HiddenFor(model => model.Id)
 
             <div class="form-group">
-                @*@Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control form_service_date", @Value = Model.ServiceDate.ToString("dd/MM/yyyy"), @autocomplete = "off" } })
                     @Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })
-                </div>*@
-                <div class="col-sm-2">
-                    <label>
-                        Service date
-                    </label>
-                    <div class="row">
-                        <input type="text" class="form-control datepicker" name="service_date" value="@String.Format("{0:dd.MM.yyyy}", Model.ServiceDate)"/>
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button" onclick="$(this).closest('.input-group').find('.datepicker').focus();return false;"><span class="glyphicon glyphicon-calendar"></span></button>
-                        </span>
-                    </div>
                 </div>
             </div>
-
             <div class="form-group">
                 @Html.LabelFor(model => model.Master, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Master, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Master, new { htmlAttributes = new { @class = "form-control", @autocomplete = "off" } })
                     @Html.ValidationMessageFor(model => model.Master, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -59,14 +43,21 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="SaveService" class="btn btn-default" formaction="@Url.Action("SaveService")"/>
+                    <input type="submit" value="SaveService" class="btn btn-default" formaction="@Url.Action("SaveService")" />
                 </div>
             </div>
         </div>
     }
 
     <div>
-        @Html.ActionLink("Back to List", "Services", "Home")
+        <a class="btn btn-outline-info" href="/Home/Services">Back to services list</a>
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    $('.form_service_date').datepicker({
+        autoclose: true,
+        todayHighlight: true,
+        format: "dd-mm-yyyy"
+    });
+</script>

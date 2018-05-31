@@ -23,7 +23,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    <input type="text" autocomplete="off" class="form-control form_service_date" id="ServiceDate">
+                    <input type="text" autocomplete="off" class="form-control form_service_date" id="ServiceDate" name="ServiceDate">
                     @*@Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new {@type="text", @class = "form_service_date form-control" } })*@
                     @*@Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })*@
                 </div>
@@ -62,6 +62,7 @@
 <script type="text/javascript">
     $('.form_service_date').datepicker({
         autoclose: true,
-        todayHighlight: true
+        todayHighlight: true,
+        format: "dd/mm/yyyy"
     });
 </script>

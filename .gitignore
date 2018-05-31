@@ -30,3 +30,5 @@ Tune-Up/Tune-Up/obj/Debug/Tune-Up.dll
 *.ide
 *.ide-shm
 *.ide-wal
+*.cache
+*.ide-shm

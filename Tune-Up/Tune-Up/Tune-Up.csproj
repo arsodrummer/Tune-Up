@@ -174,6 +174,7 @@
     <Compile Include="Controllers\AutopartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Autopart\AddAutopart.cshtml" />
     <Content Include="Views\Autopart\EditAutopart.cshtml" />
+    <Content Include="Views\Vehicle\AddVehicle.cshtml" />
+    <Content Include="Views\Vehicle\EditVehicle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -219,7 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Vehicles\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

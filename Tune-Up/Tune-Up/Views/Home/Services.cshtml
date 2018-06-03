@@ -1,6 +1,4 @@
 ﻿@model IEnumerable<Tune_Up.Models.Service>
-
-
 <p>
     <a class="btn btn-outline-primary" href="/Service/AddService">Add</a>
 </p>
@@ -11,9 +9,15 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Master)
-        </th>
+        </th>       
         <th>
             @Html.DisplayNameFor(model => model.Distance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autopart)
         </th>
         <th></th>
     </tr>
@@ -22,13 +26,19 @@
     {
         <tr>
             <td>
-                <div class="alert">@item.ServiceDate.ToString("dd-MM-yyyy")</div>
+                @item.ServiceDate.ToString("dd-MM-yyyy")
             </td>
             <td>
                 @item.Master
             </td>
             <td>
                 @item.Distance
+            </td>
+            <td>
+                @item.Vehicle
+            </td>
+            <td>
+                @item.Autopart
             </td>
             <td>
                 @Html.ActionLink("Edit", "EditService", "Service", new { id = item.Id }, null) |

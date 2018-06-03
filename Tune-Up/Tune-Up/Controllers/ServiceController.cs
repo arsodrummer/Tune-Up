@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using System.Web.Services.Description;
 using Tune_Up.Models.DbModels;
 
 namespace Tune_Up.Controllers
@@ -12,7 +8,6 @@ namespace Tune_Up.Controllers
     {
         DbEntities db = new DbEntities();
 
-        // GET: Service
         public ActionResult AddService()
         {
             return View();
@@ -48,7 +43,7 @@ namespace Tune_Up.Controllers
             db.SaveChanges();
             return RedirectToAction("Services", "Home");
         }
-
+        
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

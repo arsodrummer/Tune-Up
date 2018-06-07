@@ -1,5 +1,9 @@
-﻿@model Tune_Up.Models.Service
-
+﻿@using Tune_Up.Models;
+@model Tune_Up.Models.Service
+@{
+    List<Vehicle> vehicles = ViewBag.Vehicles as List<Vehicle>;
+    List<Autopart> autoparts = ViewBag.Autoparts as List<Autopart>;
+}
 <!DOCTYPE html>
 
 <html>
@@ -40,7 +44,31 @@
                     @Html.ValidationMessageFor(model => model.Distance, "", new { @class = "text-danger" })
                 </div>
             </div>
-            
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Vehicle, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <select name="vehicleId" class="custom-select">
+                        @foreach (Vehicle v in vehicles)
+                        {
+                            <option value="@v.Id">@v.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Autopart, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <select name="autopartId" class="custom-select">
+                        @foreach (Autopart a in autoparts)
+                        {
+                            <option value="@a.Id">@a.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Save" class="btn btn-default" formaction="@Url.Action("SaveService")" />

@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
+using Tune_Up.Models;
 using Tune_Up.Models.DbModels;
 
 namespace Tune_Up.Controllers
@@ -22,10 +24,23 @@ namespace Tune_Up.Controllers
         [HttpPost]
         public ActionResult SaveService(Tune_Up.Models.Service item)
         {
+            string v = Request.Form["vehicleId"];
+            int vId = 0;
+            Int32.TryParse(v, out vId);
+            Vehicle vehicle = db.Vehicles.Where(s => s.Id == vId).FirstOrDefault();
+
+            string a = Request.Form["autopartId"];
+            int aId = 0;
+            Int32.TryParse(a, out aId);
+            Autopart autopart = db.Autoparts.Where(s => s.Id == aId).FirstOrDefault();
+
             var itemToSave = db.Services.Where(s => s.Id == item.Id).FirstOrDefault();
+
             itemToSave.Master = item.Master;
             itemToSave.ServiceDate = item.ServiceDate;
             itemToSave.Distance = item.Distance;
+            itemToSave.Vehicle = vehicle;
+            itemToSave.Autopart = autopart;
             db.SaveChanges();
             return RedirectToAction("Services", "Home");
         }
@@ -33,6 +48,8 @@ namespace Tune_Up.Controllers
         public ActionResult EditService(int? id)
         {
             var item = db.Services.Where(s => s.Id == id).FirstOrDefault();
+            ViewBag.Vehicles = db.Vehicles.ToList();
+            ViewBag.Autoparts = db.Autoparts.ToList();
             return View(item);
         }
         [HttpGet]

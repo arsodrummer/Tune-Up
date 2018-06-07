@@ -37,7 +37,11 @@ namespace Tune_Up.Controllers
         // Services
         public ActionResult Services()
         {
-            return View(db.Services.ToList());
+            var viewModel =
+                    from pd in db.Services
+                    select new ServiceHolder { Autopart = pd.Autopart, Service = pd, Vehicle = pd.Vehicle};
+
+            return View(viewModel.ToList());
         }
         // Autoparts
         public ActionResult Autoparts()

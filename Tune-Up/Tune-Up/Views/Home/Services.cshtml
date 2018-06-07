@@ -1,17 +1,17 @@
-﻿@model IEnumerable<Tune_Up.Models.Service>
+﻿@model IEnumerable<Tune_Up.Models.ServiceHolder>
 <p>
     <a class="btn btn-outline-primary" href="/Service/AddService">Add</a>
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ServiceDate)
+            @Html.DisplayNameFor(model => model.Service.ServiceDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Master)
-        </th>       
+            @Html.DisplayNameFor(model => model.Service.Master)
+        </th>
         <th>
-            @Html.DisplayNameFor(model => model.Distance)
+            @Html.DisplayNameFor(model => model.Service.Distance)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Vehicle)
@@ -26,23 +26,29 @@
     {
         <tr>
             <td>
-                @item.ServiceDate.ToString("dd-MM-yyyy")
+                @item.Service.ServiceDate.ToString("dd-MM-yyyy")
             </td>
             <td>
-                @item.Master
+                @item.Service.Master
             </td>
             <td>
-                @item.Distance
+                @item.Service.Distance
+            </td>
+	        <td>                
+                @{
+                   var v = item.Vehicle == null ? null : item.Vehicle.Name;
+                }
+                @v
             </td>
             <td>
-                @item.Vehicle
+                @{
+                   var a = item.Autopart == null ? null : item.Autopart.Name;
+                }
+                @a
             </td>
             <td>
-                @item.Autopart
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "EditService", "Service", new { id = item.Id }, null) |
-                @Html.ActionLink("Delete", "DeleteService", "Service", new { id = item.Id }, null)
+                @Html.ActionLink("Edit", "EditService", "Service", new { id = item.Service.Id }, null) |
+                @Html.ActionLink("Delete", "DeleteService", "Service", new { id = item.Service.Id }, null)
             </td>
         </tr>
     }

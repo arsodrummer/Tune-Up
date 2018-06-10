@@ -3,57 +3,43 @@
     <a class="btn btn-outline-primary" href="/Service/AddService">Add</a>
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Service.ServiceDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Service.Master)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Service.Distance)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Vehicle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Autopart)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <thead class="thead-light">
         <tr>
-            <td>
-                @item.Service.ServiceDate.ToString("dd-MM-yyyy")
-            </td>
-            <td>
-                @item.Service.Master
-            </td>
-            <td>
-                @item.Service.Distance
-            </td>
-	        <td>                
-                @{
-                   var v = item.Vehicle == null ? null : item.Vehicle.Name;
-                }
-                @v
-            </td>
-            <td>
-                @{
-                   var a = item.Autopart == null ? null : item.Autopart.Name;
-                }
-                @a
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "EditService", "Service", new { id = item.Service.Id }, null) |
-                @Html.ActionLink("Delete", "DeleteService", "Service", new { id = item.Service.Id }, null)
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Service.ServiceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service.Master)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle)
+            </th>
+            <th></th>
         </tr>
-    }
-</table>
-<div>
-    <a class="btn btn-outline-info" href="/Home/Index">Back</a>
-</div>
 
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Service.ServiceDate.ToString("dd-MM-yyyy")
+                </td>
+                <td>
+                    @item.Service.Master
+                </td>
+                <td>
+                    @{
+                        var v = item.Vehicle == null ? null : item.Vehicle.Name;
+                    }
+                    @v
+                </td>
+                <td>
+                    <a href="/Service/EditService/@item.Service.Id" class="btn btn-outline-success"> <img src="~/Content/Icons/pencil.svg"/></a>
+                    <a href="/Service/DeleteService/@item.Service.Id" class="btn btn-outline-danger"><img src="~/Content/Icons/trashcan.svg"/></a>
+                </td>
+            </tr>
+        }
+</table>
+
+<a class="btn btn-outline-info" href="/Home/Index">
+    Back
+</a>

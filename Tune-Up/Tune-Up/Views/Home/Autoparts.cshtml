@@ -4,15 +4,13 @@
     <a class="btn btn-outline-primary" href="/Autopart/AddAutopart">Add</a>
 </p>
 <table class="table">
+    <thead class="thead-light">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Manufacturer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
         </th>
         <th></th>
     </tr>
@@ -25,9 +23,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo)
             </td>
             <td>
                 @Html.ActionLink("Edit", "EditAutopart", "Autopart", new { id = item.Id }, null) |

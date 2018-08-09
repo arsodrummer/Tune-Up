@@ -5,11 +5,9 @@ using System.Web;
 
 namespace Tune_Up.Models
 {
-    public class Autopart
+    public class Gallery
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Manufacturer { get; set; }
-        public string Photo { get; set; }
+        public int Title { get; set; }
     }
 }

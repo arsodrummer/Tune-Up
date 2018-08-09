@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,6 +63,8 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -126,10 +129,26 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Icons\pencil.svg" />
     <Content Include="Content\Icons\trashcan.svg" />
+    <Content Include="Content\Images\cars.jpg" />
+    <Content Include="Content\Images\icon-AC.png" />
+    <Content Include="Content\Images\icon-BrakeRepair.png" />
+    <Content Include="Content\Images\icon-CarRepair.png" />
+    <Content Include="Content\Images\icon-CheckEngineLight.png" />
+    <Content Include="Content\Images\icon-FuelSystemService.png" />
+    <Content Include="Content\Images\icon-Maintenance.png" />
+    <Content Include="Content\Images\icon-OilChanges.png" />
+    <Content Include="Content\Images\icon-TireShop.png" />
+    <Content Include="Content\Images\icon-Transmission.png" />
+    <Content Include="Content\Images\icon-TuneUp.png" />
+    <Content Include="Content\Images\tune-up-car.jpg" />
     <Content Include="Content\Images\Tune-Up.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Content\bootstrap-datepicker.css.map" />
+    <Content Include="Content\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.css.map" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -152,10 +171,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Content\bootstrap-datepicker.css.map" />
-    <Content Include="Content\bootstrap-datepicker.standalone.css.map" />
-    <Content Include="Content\bootstrap-datepicker3.css.map" />
-    <Content Include="Content\bootstrap-datepicker3.standalone.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -185,6 +200,7 @@
     <Compile Include="Models\DbModels\DataDBInitialiser.cs" />
     <Compile Include="Models\DbModels\DbEntities.cs" />
     <Compile Include="Models\FuelType.cs" />
+    <Compile Include="Models\Gallery.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\ServiceHolder.cs" />
     <Compile Include="Models\TypeOfJob.cs" />
@@ -202,6 +218,10 @@
     <Content Include="Views\Service\EditService.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Autopart\AddAutopart.cshtml" />
+    <Content Include="Views\Autopart\EditAutopart.cshtml" />
+    <Content Include="Views\Vehicle\AddVehicle.cshtml" />
+    <Content Include="Views\Vehicle\EditVehicle.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -213,10 +233,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Autopart\AddAutopart.cshtml" />
-    <Content Include="Views\Autopart\EditAutopart.cshtml" />
-    <Content Include="Views\Vehicle\AddVehicle.cshtml" />
-    <Content Include="Views\Vehicle\EditVehicle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

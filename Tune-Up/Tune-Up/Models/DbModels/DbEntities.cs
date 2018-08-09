@@ -14,7 +14,6 @@ namespace Tune_Up.Models.DbModels
 
         public DbEntities() : base("DataDB")
         {
-
         }
     }
 }

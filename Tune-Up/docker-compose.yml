@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  tune-up:
+    image: ${DOCKER_REGISTRY}tuneup
+    build:
+      context: .\Tune-Up
+      dockerfile: Dockerfile

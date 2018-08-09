@@ -22,9 +22,9 @@
         @foreach (var item in Model)
         {
             <tr>
-                <th scope="row">
+                <td scope="row">
                     @Html.DisplayFor(modelItem => item.Name)
-                </th>
+                </td>
 
                 <td>
                     @Html.DisplayFor(modelItem => item.EngineVolume)
@@ -33,8 +33,8 @@
                     @Html.DisplayFor(modelItem => item.Fuel)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "EditVehicle", "Vehicle", new { id = item.Id }, null) |
-                    @Html.ActionLink("Delete", "DeleteVehicle", "Vehicle", new { id = item.Id }, null)
+                    <a href="/Vehicle/EditVehicle/@item.Id" class="btn btn-outline-success"><img src="~/Content/Icons/pencil.svg" alt="Edit"/></a>
+                    <a href="/Vehicle/DeleteVehicle/@item.Id" class="btn btn-outline-danger"><img src="~/Content/Icons/trashcan.svg" alt="Delete"/></a>
                 </td>
             </tr>
         }

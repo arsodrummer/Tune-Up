@@ -1,4 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using Tune_Up.Models.DbModels;
 
@@ -20,14 +24,21 @@ namespace Tune_Up.Controllers
             return RedirectToAction("Vehicles", "Home");
         }
         [HttpPost]
-        public ActionResult SaveVehicle(Tune_Up.Models.Vehicle item)
+        public ActionResult SaveVehicle(Tune_Up.Models.Vehicle data, HttpPostedFileBase photo)
         {
-            var itemToSave = db.Vehicles.Where(s => s.Id == item.Id).FirstOrDefault();
-            itemToSave.EngineVolume = item.EngineVolume;
-            itemToSave.Fuel = item.Fuel;
-            itemToSave.ManufacturingDate = item.ManufacturingDate;
-            itemToSave.Name = item.Name;
-            itemToSave.Photo = item.Photo;
+            var itemToSave = db.Vehicles.Where(s => s.Id == data.Id).FirstOrDefault();
+            itemToSave.EngineVolume = data.EngineVolume;
+            itemToSave.Fuel = data.Fuel;
+            itemToSave.ManufacturingDate = data.ManufacturingDate;
+            itemToSave.Name = data.Name;
+            //itemToSave.Photo = photo.FileName;
+
+            if (photo != null && photo.ContentLength > 0)
+            {
+                string path = Path.Combine(Server.MapPath("~/Content/Images"), Path.GetFileName(photo.FileName));
+                photo.SaveAs(path);
+            }
+
             db.SaveChanges();
             return RedirectToAction("Vehicles", "Home");
         }

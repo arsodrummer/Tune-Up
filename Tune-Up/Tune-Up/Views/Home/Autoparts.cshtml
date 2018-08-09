@@ -25,8 +25,8 @@
                 @Html.DisplayFor(modelItem => item.Manufacturer)
             </td>
             <td>
-                @Html.ActionLink("Edit", "EditAutopart", "Autopart", new { id = item.Id }, null) |
-                @Html.ActionLink("Delete", "DeleteAutopart", "Autopart", new { id = item.Id }, null)
+                <a href="/Autopart/EditAutopart/@item.Id" class="btn btn-outline-success"><img src="~/Content/Icons/pencil.svg" alt="Edit"/></a>
+                <a href="/Autopart/DeleteAutopart/@item.Id" class="btn btn-outline-danger"><img src="~/Content/Icons/trashcan.svg" alt="Delete"/></a>
             </td>
         </tr>
     }

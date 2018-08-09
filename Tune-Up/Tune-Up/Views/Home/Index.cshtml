@@ -1,3 +1,28 @@
 ﻿<div class="text-center">
-    <img src="~/Content/Images/Tune-Up.jpg" class="img-fluid rounded" />
+    @*<img src="~/Content/Images/Tune-Up.jpg" class="img-fluid rounded" />*@
+
+    <div class="card-deck">
+        <div class="card border-info mb-3">
+            <div class="card-header">Vehicles</div>
+            <div class="card-body text-info">
+                <input class="img-fluid" type="image" onclick="location.href='@Url.Action("Vehicles","Home")'; return false;" src="~/Content/Images/icon-TuneUp.png" />
+                <p class="card-text">Add your car or any other vehicle.</p>
+            </div>
+        </div>
+        <div class="card border-info mb-3">
+            <div class="card-header">Autoparts</div>
+            <div class="card-body text-info">
+                <input class="img-fluid" type="image" onclick="location.href='@Url.Action("Autoparts","Home")'; return false;" src="~/Content/Images/icon-CarRepair.png" />
+                <p class="card-text">All your autoparts here.</p>
+            </div>
+        </div>
+        <div class="card border-info mb-3">
+            <div class="card-header">Services</div>
+            <div class="card-body text-info">
+                <input  class="img-fluid" type="image" onclick="location.href='@Url.Action("Services","Home")'; return false;" src="~/Content/Images/icon-Maintenance.png" />
+                <p class="card-text">You can store here any service or repair jobs.</p>
+            </div>
+        </div>
+    </div>
+
 </div>

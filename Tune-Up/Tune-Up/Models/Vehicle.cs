@@ -12,6 +12,6 @@ namespace Tune_Up.Models
         public DateTime ManufacturingDate { get; set; }
         public double EngineVolume { get; set; }
         public FuelType Fuel { get; set; }
-        public byte[] Photo { get; set; }
+        public int? PhotoId { get; set; }
     }
 }

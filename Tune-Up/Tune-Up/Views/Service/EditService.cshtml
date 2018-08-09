@@ -16,70 +16,72 @@
     {
         @Html.AntiForgeryToken()
 
-        <div class="form-horizontal">
-            <h4>Service</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.Id)
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control form_service_date", @Value = Model.ServiceDate.ToString("dd/MM/yyyy"), @autocomplete = "off" } })
-                    @Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })
+        <div class="card">
+            <div class="form-horizontal">
+                <div class="card-header text-center">
+                    Service
                 </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.Master, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Master, new { htmlAttributes = new { @class = "form-control", @autocomplete = "off" } })
-                    @Html.ValidationMessageFor(model => model.Master, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Distance, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Distance, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Distance, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Vehicle, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    <select name="vehicleId" class="custom-select">
-                        @foreach (Vehicle v in vehicles)
-                        {
-                            <option value="@v.Id">@v.Name</option>
-                        }
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Autopart, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    <select name="autopartId" class="custom-select">
-                        @foreach (Autopart a in autoparts)
-                        {
-                            <option value="@a.Id">@a.Name</option>
-                        }
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" formaction="@Url.Action("SaveService")" />
+                <div class="card-body">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Id)
+                    <!--Service date-->
+                    <div class="row">
+                        <div class="col-md-1">
+                            @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control form_service_date", @Value = Model.ServiceDate.ToString("dd/MM/yyyy"), @autocomplete = "off" } })
+                            @Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <!--Master-->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Master, htmlAttributes: new { @class = "control-label " })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Master, new { htmlAttributes = new { @class = "form-control", @autocomplete = "off" } })
+                            @Html.ValidationMessageFor(model => model.Master, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <!--Distance-->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Distance, htmlAttributes: new { @class = "control-label" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Distance, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Distance, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <!--Vehicle-->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Vehicle, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <select name="vehicleId" class="custom-select">
+                                @foreach (Vehicle v in vehicles)
+                                {
+                                    <option value="@v.Id">@v.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <!--Autopart-->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Autopart, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <select name="autopartId" class="custom-select">
+                                @foreach (Autopart a in autoparts)
+                                {
+                                    <option value="@a.Id">@a.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <input type="submit" value="Save" class="btn btn-outline-primary" formaction="@Url.Action("SaveService")" />
+                        <a class="btn btn-outline-secondary" href="/Home/Services">Back to services list</a>
+                    </div>
                 </div>
             </div>
         </div>
     }
-
-    <div>
-        <a class="btn btn-outline-info" href="/Home/Services">Back to services list</a>
-    </div>
 </body>
 </html>
 <script type="text/javascript">

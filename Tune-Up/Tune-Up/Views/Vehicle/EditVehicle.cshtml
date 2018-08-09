@@ -8,67 +8,66 @@
     <title>Edit vehicle item</title>
 </head>
 <body>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("SaveVehicle", "Vehicle", null, FormMethod.Post, new {enctype = "multipart/form-data"}))
     {
         @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <h4>Vehicle</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            @Html.HiddenFor(model => model.Id)
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        <div class="card">
+            <div class="form-horizontal">
+                <div class="card-header text-center">
+                    Vehicle
                 </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.ManufacturingDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ManufacturingDate, new { htmlAttributes = new { @class = "form-control form_manufacturing_date", @Value = Model.ManufacturingDate.ToString("dd/MM/yyyy"), @autocomplete = "off" } })
-                    @Html.ValidationMessageFor(model => model.ManufacturingDate, "", new { @class = "text-danger" })
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.Id)
+                <!--Name-->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.EngineVolume, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.EngineVolume, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.EngineVolume, "", new { @class = "text-danger" })
+                <!--Manufacturing date-->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ManufacturingDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ManufacturingDate, new { htmlAttributes = new { @class = "form-control form_manufacturing_date", @Value = Model.ManufacturingDate.ToString("dd/MM/yyyy"), @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.ManufacturingDate, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Fuel, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EnumDropDownListFor(model => model.Fuel, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Fuel, "", new { @class = "text-danger" })
+                <!--Engine volume-->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EngineVolume, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.EngineVolume, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EngineVolume, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Photo, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Photo, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
+                <!--Fuel-->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Fuel, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EnumDropDownListFor(model => model.Fuel, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Fuel, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" formaction="@Url.Action("SaveVehicle")"/>
+                <!--Photo-->
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Photo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input name="photo" type="file" id="Photo" />
+                        @*@Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })*@
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-outline-primary" formaction="@Url.Action("SaveVehicle")" />
+                        <a class="btn btn-outline-secondary" href="/Home/Vehicles">Back to vehicles list</a>
+                    </div>
                 </div>
             </div>
         </div>
     }
 
-    <div>
-        <a class="btn btn-outline-info" href="/Home/Vehicles">Back to vehicles list</a>
-    </div>
 </body>
 </html>
 <script type="text/javascript">
